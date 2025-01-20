@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기숭청</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button class="btn back-btn" onclick="location.href='index.html'">← 돌아가기</button>
+        <h1><img id="logo" class="item" src="img/기숭청.png" alt="로고"></h1>
+    </header>
+    <div class="container">
+        <img id="icon" class="img" src="img/loading.png" alt="날씨 아이콘"/>
+        <h2 id="loading-message">날씨 정보를 가져오는 중입니다... 🌦️</h2>
+        <h2>            
+            <span id="temp"> </span>
+            <span id="condition"> </span>
+        </h2>
+        <h3>
+            <span id="min_temp"></span>
+             <span id="max_temp"></span>
+        </h3>
+        <h3 id="message"></h3>
+        <button onclick="showClothingRecommendation()">추천 옷차림 보기</button>
+        <button onclick="showActivityRecommendation()">추천 활동 보기</button>
+    </div>
+    <div id="recommendation" class="recommendation" style="display: none;">
+    </div>
+</body>
+<script src="app.js"></script>
+</html>

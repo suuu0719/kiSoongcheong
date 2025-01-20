@@ -1,0 +1,242 @@
+* {
+    font-family: 'Pretendard', sans-serif;
+}
+@font-face {
+    font-family: 'KyoboHand';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+}
+body{
+    text-align: center;
+    background-color: #f0f4f8;
+}
+#logo{
+    width: 200px;
+}
+.back-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.item{
+    flex: 1;
+}
+button{
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #ffff83;
+    border: 2px solid #5e5e5e;
+    border-radius: 20px;
+    margin: 5px 10px;
+    letter-spacing: 1px;
+    font-family: 'KyoboHand';
+    font-size: 15px;
+    transition: background-color 0.2s linear, border-color 0.24s linear
+}
+button:hover {
+    cursor: pointer;
+    background-color: #b7f2ff;
+}
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 0px 30px;
+}
+input {
+    margin: 10px;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+#message{
+    color: #5e5e5e;
+}
+.img{
+    width: 200px;
+    margin: 20px;
+}
+.highlight { 
+    /* 하이라이트 처리 */
+    display: inline;
+    box-shadow: inset 0 -15px 0 #b7f2ff; 
+}
+
+.recommendation {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 80%;
+}
+
+.recommendation h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.recommendation p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.weather-container {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none; 
+    
+}
+
+.weather-icon {
+    position: absolute;
+    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji';
+    top: -50px;
+    font-size: 32px;
+    color: white;
+    opacity: 80%;
+    animation: fall linear infinite, sparkle 3s ease-in-out infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
+/* 회원가입 css */
+
+input, textarea, select, #signupForm button {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+td {
+    padding: 10px; /* 셀 간격 추가 */
+    vertical-align: middle; 
+    text-align: left; /* 레이블 정렬 */
+}
+
+label, fieldset legend{
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%; /* 입력 필드가 셀의 너비에 맞도록 */;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form fieldset {
+    display: flex;
+    justify-content: space-evenly;
+    border: none;
+    margin: 0 auto;
+}
+
+form fieldset {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label span {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: -2px 10px 0 0;
+    vertical-align: middle;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: background-color 0.24s linear, border-color 0.24s linear;
+}
+
+input[type="radio"]:checked + label {
+    color: #333;
+    font-weight: 700;
+}
+
+input[type="radio"]:checked + label span {
+    background-color: #b7f2ff;
+    border-color: #fff;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 날씨 아이콘 CSS */
+
+.weather-container {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none; /* 클릭 이벤트 무시 */
+    
+}
+
+.weather-icon {
+    position: absolute;
+    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji';
+    top: -50px;
+    font-size: 32px; /* 이모지 크기 */
+    color: white;
+    opacity: 80%;
+    animation: fall linear infinite, sparkle 3s ease-in-out infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
